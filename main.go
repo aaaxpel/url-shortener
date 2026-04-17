@@ -13,8 +13,6 @@ func main() {
 	http.HandleFunc("DELETE /shorten/{code}", Delete)
 	http.HandleFunc("GET /shorten/{code}/stats", GetStats)
 
-	// http.Redirect()
-
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatal(err)
